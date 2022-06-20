@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="43200" />
+    <meta id="myViewport" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta charset="utf-8" />
+    <meta property="title" content="visu" />
+
+    <title>visu</title>``
+    <link type="text/css" href="resources/css/index.css" rel="stylesheet" />
+    <link type="text/css" href="resources/css/nes.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+</head>
+
+<body>
+    <div class="stackoverflow_17069435">
+        <div class="section-info-container box-shadow" id="section-info-container">
+            <div class="info-header">
+    
+            </div>
+            <button class="info-container-play-btn pending" onclick="runGame()" id="play-button" disabled="true"></button>
+            <p id="info-container-play-btn-description">Loading visu..</p>
+        </div>
+        <div class="section-game-container invisible" id="section-game-container">
+            <div class="game-container">
+                <div class="game-canvas-container" id="game-canvas-container"></div>
+                <div class="game-canvas-button-container">
+                    <button class="nes-btn is-primary" onclick="enableFullscreen()">FULL SCREEN</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="resources/js/game-loader.js?v=492779"></script>
+    <script>window.onload = downloadSources;</script>
+    <canvas style="display: none" id="memecanvas"></canvas>
+</body>
+
+</html>
