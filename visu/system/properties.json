@@ -49,6 +49,6 @@
 	"base-timeline": "platformer_test.json",
 	"base-timeline-function": "midboozeDistantMemory",
 	"GameController.enableReplay": true,
-	"player.jumpFactor": 0.022,
-	"player.gravityFactor": 0.0011
+	"player.jumpFactor": 0.0181,
+	"player.gravityFactor": 0.00096
 }
