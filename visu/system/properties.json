@@ -46,9 +46,19 @@
 	"touchInputHandler.virtualJoystick.angleMargin": 12,
 	"virtualJoystick.deadzonessd": 0.33,
 
-	"base-timeline": "platformer_test.json",
-	"base-timeline-function": "midboozeDistantMemory",
+	"base-timeline": "eldon_demo_1.json",
+	"base-timeline-function": "eldonEctasy",
+	"base-timeline.bpm": 117,
+
 	"GameController.enableReplay": true,
-	"player.jumpFactor": 0.0181,
-	"player.gravityFactor": 0.00096
+
+	"player.jumpFactor": 0.0113,
+	"player.gravityFactor": 0.00046,
+	"player.horizontalFriction": 2.3,
+	"player.horizontalMaxSpeed": 1.18,
+	"player.horizontalAcceleration": 1.0,
+	"player.verticalFriction": 1.7,
+	"player.verticalMaxSpeed": 0.97,
+	"player.verticalAcceleration": 1.0
+	
 }
