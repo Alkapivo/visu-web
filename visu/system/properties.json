@@ -48,7 +48,7 @@
 
 	"base-timeline": "eldon_2.json",
 	"base-timeline-function": null,
-	"GameController.enableReplay": false,
+	"GameController.enableReplay": true,
 	"player.jumpFactor": 0.01797,
 	"player.gravityFactor": 0.00112,
 	"player.horizontalFriction": 3.1,
