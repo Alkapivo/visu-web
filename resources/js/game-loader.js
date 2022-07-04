@@ -28,8 +28,8 @@ function getCanvas() {
     return document.getElementById("canvas");
 }
 
-function downloadSources() {
-    appendJSToDOM("visu/visu.js", document.body, () => {
+function downloadSources(pathToVisuJS) {
+    appendJSToDOM(pathToVisuJS, document.body, () => {
         
         runGame();
     });
@@ -115,3 +115,25 @@ function generateTestToSaveFile() {
     let url = window.URL.createObjectURL(blobData);
     saveFile('example.json', url);
 }
+
+function fetchVisuTracks() {
+    return {
+        "midbooze/distant-memory": "resources/visu/midbooze/distant-memory/visu.js",
+        "selma-henerum/lets-revisit-our-time": "resources/visu/selma-henerum/lets-revisit-our-time/visu.js",
+        "elon-nadie/vanished_thecn": "resources/visu/eldon-nadie/vanished_thecn/visu.js"
+    };
+}
+
+const selectDOMObject = document.getElementById("visu-loader")
+selectDOMObject.addEventListener("change", () => {
+    const tracks = fetchVisuTracks();
+    if (selectDOMObject.value in tracks) {
+        console.log("Load", selectDOMObject.value);
+        downloadSources(tracks[selectDOMObject.value])
+
+        document.getElementById("visu-loader-div").remove();
+        document.getElementById("visu-loading").style.display = "block";
+    }
+})
+
+
