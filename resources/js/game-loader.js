@@ -121,7 +121,8 @@ function fetchVisuTracks() {
         "midbooze/distant-memory": "resources/visu/midbooze/distant-memory/visu.js",
         "selma-henerum/lets-revisit-our-time": "resources/visu/selma-henerum/lets-revisit-our-time/visu.js",
         "elon-nadie/vanished_thecn": "resources/visu/eldon-nadie/vanished_thecn/visu.js",
-        "downcasted-enmity/butterflies": "resources/visu/downcasted-enmity/butterflies/visu.js"
+        "downcasted-enmity/butterflies": "resources/visu/downcasted-enmity/butterflies/visu.js",
+        "sewerslvt/ntr_1": "resources/visu/sewerslvt/ntr_1/visu.js"
     };
 }
 
