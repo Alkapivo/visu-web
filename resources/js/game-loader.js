@@ -122,8 +122,18 @@ function fetchVisuTracks() {
         "selma-henerum/lets-revisit-our-time": "resources/visu/selma-henerum/lets-revisit-our-time/visu.js",
         "piano-princess/hungry": "resources/visu/piano-princess/hungry/visu.js",
         "dvwnpour/butterflies": "resources/visu/dvwnpour/butterflies/visu.js",
-        "sewerslvt/ntr_1": "resources/visu/sewerslvt/ntr_1/visu.js"
+        "sewerslvt/ntr_1": "resources/visu/sewerslvt/ntr_1/visu.js",
+        "base/editor": "resources/visu/base/editor/visu.js"
     };
+}
+
+function vl_sendMidiMatrixEvent(event) {
+    try {
+        console.log("vl_sendMidiMatrixEvent", event);
+        gml_Script_gmcallback_sendMidiMatrixKey(-1, -1, event);
+    } catch (exception) {
+        console.error(exception);
+    }
 }
 
 const selectDOMObject = document.getElementById("visu-loader")

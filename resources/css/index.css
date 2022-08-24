@@ -152,7 +152,6 @@ canvas {
 }
 
 .game-container {
-    display: inline-block;
     text-align: center;
     margin: 0 auto;
     padding: min(5px, 1vh) 1vw;
@@ -160,8 +159,8 @@ canvas {
 }
 
 .game-canvas-container {
-    width: 1280px;
-    height: 720px;
+    width: 800px;
+    height: 600px;
 }
 
 .box-shadow {
