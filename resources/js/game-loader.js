@@ -149,3 +149,4 @@ selectDOMObject.addEventListener("change", () => {
 })
 
 
+//    try {console.log("INLINE_HOOK", this.path); vl_sendMidiMatrixEvent(this.path)} catch (ex) {console.error(ex)}

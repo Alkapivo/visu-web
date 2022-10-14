@@ -15,138 +15,228 @@
     <link type="text/css" href="resources/css/nes.css" rel="stylesheet" />
     <link type="text/css" href="resources/css/virtual-launchpad.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+    <!-- React-808 -->
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="manifest" href="/manifest.json" />
+    <script>function gtag() { dataLayer.push(arguments) } window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "UA-1796620-27")</script>
+    <link href="/static/css/main.0dcdb489.chunk.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="stackoverflow_17069435">
-        <div class="section-info-container box-shadow" id="section-info-container">
-            <div id="visu-loader-div" style="background-color:#212529; padding: 1rem">
-                <label for="dark_select" style="color:#fff">Select visu track</label>
-                <div class="nes-select is-dark">
-                    <select required id="visu-loader">
-                        <option value="" disabled selected hidden>Play track 44...</option>
-                        <!--<option value="midbooze/distant-memory">Midbooze - Distant Memory</option>-->
-                        <!--<option value="selma-henerum/lets-revisit-our-time">kedy_selma - Lets revisit our time</option>-->
-                        <!--<option value="piano-princess/hungry">Piano Princess - Hungry</option>-->
-                        <!--<option value="dvwnpour/butterflies">Dvwnpour - Butterflies</option>-->
-                        <!--<option value="sewerslvt/ntr_1">dev:sewerslvt/ntr_1</option>-->
-                        <option value="base/editor">editor</option>
-                    </select>
-                </div>
-            </div>
-            <div id="visu-loading" style="display: none;">
-                <button class="info-container-play-btn pending" onclick="downloadSources()" id="play-button"></button>
-                <p id="info-container-play-btn-description">Loading visu..</p>
-            </div>
+
+    <div class="container">
+        <div class="row gx-1 justify-content-center">
+      
+          <div class="col-lg-3 col-md-6">
+                asd
+          </div>
+      
+          <div class="col-lg-3 col-md-6">
+                asd
+          </div>
+      
+          <div class="col-lg-3 col-md-6">
+                asd
+          </div>
+      
+          <div class="col-lg-3 col-md-6">
+                asd
+          </div>
+      
         </div>
-        <div class="section-game-container invisible" id="section-game-container">
-            <div class="game-container">
-                
-            <table>
-                <tbody>
-                    <tr>
-                        <td>
-                            <div class="game-canvas-container" id="game-canvas-container"></div>
-                            <div class="game-canvas-button-container">
-                                <button class="nes-btn is-primary" onclick="enableFullscreen()">FULL SCREEN</button>
-                                <button class="nes-btn is-secondary" onclick='gml_Script_gmcallback_sendMidiMatrixKey("1x0")''></button>
-                            </div>
-                        </td>
-                        <td>
-                            <table class="demTable">
-                                <tbody>
-                                    <tr>
-                                        <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('0x0')">SCREEN COUNT: 1</button></td>
-                                        <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('1x0')">SCREEN COUNT: 2</button></td>
-                                        <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('2x0')">SCREEN COUNT: 3</button></td>
-                                        <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('3x0')">SCREEN COUNT: 4</button></td>
-                                        <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('4x0')">ENABLE/DISABLE mesh rendering</button></td>
-                                        <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('5x0')">ENABLE/DISABLE lyrics rendering</button></td>
-                                        <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('6x0')">CRASH VISU</button></td>
-                                        <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('7x0')">CRASH VISU</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('0x1')">SCREEN COUNT SPEED: 0.001</button></td>
-                                        <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('1x1')">SCREEN COUNT SPEED: 0.004</button></td>
-                                        <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('2x1')">SCREEN COUNT SPEED: 0.040</button></td>
-                                        <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('3x1')">SCREEN COUNT SPEED: 0.100</button></td>
-                                        <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('4x1')">ENABLE/DISABLE clear frame</button></td>
-                                        <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('5x1')">ENABLE/DISABLE mesh color effect</button></td>
-                                        <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('6x1')">CHANGE GAMEPLAY</button></td>
-                                        <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('7x1')">REMOVE LAST VISU</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('0x2')">ROTATE MESH LEFT: 90</button></td>
-                                        <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('1x2')">ROTATE MESH RIGHT: 90</button></td>
-                                        <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('2x2')">ROTATE MESH LEFT: 45</button></td>
-                                        <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('3x2')">ROTATE MESH RIGHT: 45</button></td>
-                                        <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('4x2')">MESH SHAPE: 1</button></td>
-                                        <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('5x2')">MESH SHAPE: 2</button></td>
-                                        <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('6x2')">MESH SHAPE: 3</button></td>
-                                        <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('7x2')">MESH SHAPE: 4</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('0x3')">ROTATE MESH SPEED: 0.11</button></td>
-                                        <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('1x3')">ROTATE MESH SPEED: 0.33</button></td>
-                                        <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('2x3')">ROTATE MESH SPEED: 0.77</button></td>
-                                        <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('3x3')">ROTATE MESH SPEED: 1.61</button></td>
-                                        <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('4x3')">MESH SPEED: 0.1</button></td>
-                                        <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('5x3')">MESH SPEED: 0.2</button></td>
-                                        <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('6x3')">MESH SPEED: 0.5</button></td>
-                                        <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('7x3')">MESH SPEED: 0.8</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('0x4')">START SHADER 1</button></td>
-                                        <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('1x4')">START SHADER 2</button></td>
-                                        <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('2x4')">START SHADER 3</button></td>
-                                        <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('3x4')">START SHADER 4</button></td>
-                                        <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('4x4')">MESH PULSE: 150</button></td>
-                                        <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('5x4')">MESH PULSE: 60</button></td>
-                                        <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('6x4')">MESH - CHANNEL</button></td>
-                                        <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('7x4')">MESH + CHANNEL</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('0x5')">START SHADER 5</button></td>
-                                        <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('1x5')">START SHADER 6</button></td>
-                                        <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('2x5')">START SHADER 7</button></td>
-                                        <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('3x5')">START SHADER 8</button></td>
-                                        <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('4x5')">SET BKG 1</button></td>
-                                        <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('5x5')">SET BKG 2</button></td>
-                                        <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('6x5')">SET BKG 3</button></td>
-                                        <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('7x5')">SET BKG 4</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('0x6')">SHROOM POSITION: 0.10-0.15</button></td>
-                                        <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('1x6')">SHROOM POSITION: 0.35-0.40</button></td>
-                                        <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('2x6')">SHROOM POSITION: 0.60-0.65</button></td>
-                                        <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('3x6')">SHROOM POSITION: 0.85-0.90</button></td>
-                                        <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('4x6')">SHROOM POSITION: RANDOM</button></td>
-                                        <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('5x6')">SHROOM SPEED: 0.02-0.03</button></td>
-                                        <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('6x6')">SHROOM SPEED: 0.06-0.07</button></td>
-                                        <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('7x6')">START GLITCH: RANDOM</button></td>
-                                    </tr>
-                                    <tr>
-                                        <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('0x7')">SPAWN SHROOM: 1</button></td>
-                                        <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('1x7')">SPAWN SHROOM: 2</button></td>
-                                        <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('2x7')">SPAWN SHROOM: 3</button></td>
-                                        <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('3x7')">SPAWN SHROOM: 4</button></td>
-                                        <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('4x7')">SPAWN SHROOM: 5</button></td>
-                                        <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('5x7')">SPAWN SHROOM: 6</button></td>
-                                        <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('6x7')">SPAWN SHROOM: 7</button></td>
-                                        <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('7x7')">SPAWN SHROOM: 8</button></td>
-                                    </tr>
-                                </tbody>
-                            </table>            
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+      </div>
+    <div id="section-info-container">
+        <div id="visu-loading" style="display: none;">
+            <button class="info-container-play-btn pending" onclick="downloadSources()" id="play-button"></button>
+            <p id="info-container-play-btn-description">Loading visu..</p>
+        </div>
+        <div id="visu-loader-div" style="background-color:#212529; padding: 1rem">
+            <label for="dark_select" style="color:#fff">Select visu track</label>
+            <div class="nes-select is-dark">
+                <select required id="visu-loader">
+                    <option value="" disabled selected hidden>Play track 44...</option>
+                    <option value="base/editor">editor</option>
+                </select>
             </div>
         </div>
     </div>
+    <div id="section-game-container">
+        <div id="game-canvas-container" class="game-canvas-container"></div>
+        <div class="game-canvas-button-container">
+            <button class="nes-btn is-primary" onclick="enableFullscreen()">FULL SCREEN</button>
+            <button class="nes-btn is-secondary" onclick='gml_Script_gmcallback_sendMidiMatrixKey("1x0")''></button>
+        </div>
+    </div>
     
-    <script type="text/javascript" src="resources/js/game-loader.js?v=269745"></script>
-    <canvas style="display: none" id="memecanvas"></canvas>
+    <!-- React-808 -->
+    <div id="root"></div>  
+    
+    <div id="visu-launchpad-div">
+        <table class="demTable">
+            <tbody>
+                <tr>
+                    <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent(' 0x0')">SCREEN
+                COUNT: 1</button></td>
+            <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('1x0')">SCREEN COUNT:
+                    2</button></td>
+            <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('2x0')">SCREEN COUNT:
+                    3</button></td>
+            <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('3x0')">SCREEN COUNT:
+                    4</button></td>
+            <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('4x0')">ENABLE/DISABLE mesh
+                    rendering</button></td>
+            <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('5x0')">ENABLE/DISABLE
+                    lyrics rendering</button></td>
+            <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('6x0')">CRASH VISU</button>
+            </td>
+            <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('7x0')">CRASH VISU</button>
+            </td>
+            </tr>
+            <tr>
+                <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('0x1')">SCREEN COUNT
+                        SPEED: 0.001</button></td>
+                <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('1x1')">SCREEN COUNT
+                        SPEED: 0.004</button></td>
+                <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('2x1')">SCREEN COUNT
+                        SPEED: 0.040</button></td>
+                <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('3x1')">SCREEN COUNT
+                        SPEED: 0.100</button></td>
+                <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('4x1')">ENABLE/DISABLE
+                        clear frame</button></td>
+                <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('5x1')">ENABLE/DISABLE
+                        mesh color effect</button></td>
+                <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('6x1')">CHANGE
+                        GAMEPLAY</button></td>
+                <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('7x1')">REMOVE LAST
+                        VISU</button></td>
+            </tr>
+            <tr>
+                <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('0x2')">ROTATE MESH
+                        LEFT: 90</button></td>
+                <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('1x2')">ROTATE MESH
+                        RIGHT: 90</button></td>
+                <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('2x2')">ROTATE MESH
+                        LEFT: 45</button></td>
+                <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('3x2')">ROTATE MESH
+                        RIGHT: 45</button></td>
+                <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('4x2')">MESH SHAPE:
+                        1</button></td>
+                <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('5x2')">MESH SHAPE:
+                        2</button></td>
+                <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('6x2')">MESH SHAPE:
+                        3</button></td>
+                <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('7x2')">MESH SHAPE:
+                        4</button></td>
+            </tr>
+            <tr>
+                <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('0x3')">ROTATE MESH
+                        SPEED: 0.11</button></td>
+                <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('1x3')">ROTATE MESH
+                        SPEED: 0.33</button></td>
+                <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('2x3')">ROTATE MESH
+                        SPEED: 0.77</button></td>
+                <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('3x3')">ROTATE MESH
+                        SPEED: 1.61</button></td>
+                <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('4x3')">MESH SPEED:
+                        0.1</button></td>
+                <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('5x3')">MESH SPEED:
+                        0.2</button></td>
+                <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('6x3')">MESH SPEED:
+                        0.5</button></td>
+                <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('7x3')">MESH SPEED:
+                        0.8</button></td>
+            </tr>
+            <tr>
+                <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('0x4')">START SHADER
+                        1</button></td>
+                <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('1x4')">START SHADER
+                        2</button></td>
+                <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('2x4')">START SHADER
+                        3</button></td>
+                <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('3x4')">START SHADER
+                        4</button></td>
+                <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('4x4')">MESH PULSE
+                        AMOUNT: 150</button></td>
+                <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('5x4')">MESH PULSE
+                        AMOUNT: 60</button></td>
+                <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('6x4')">MESH ADD
+                        CHANNEL</button></td>
+                <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('7x4')">MESH DELETE
+                        CHANNEL</button></td>
+            </tr>
+            <tr>
+                <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('0x5')">START SHADER
+                        5</button></td>
+                <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('1x5')">START SHADER
+                        6</button></td>
+                <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('2x5')">START SHADER
+                        7</button></td>
+                <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('3x5')">START SHADER
+                        8</button></td>
+                <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('4x5')">SET BKG
+                        1</button></td>
+                <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('5x5')">SET BKG
+                        2</button></td>
+                <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('6x5')">SET BKG
+                        3</button></td>
+                <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('7x5')">SET BKG
+                        4</button></td>
+            </tr>
+            <tr>
+                <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('0x6')">SHROOM POSITION:
+                        0.10-0.15</button></td>
+                <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('1x6')">SHROOM POSITION:
+                        0.35-0.40</button></td>
+                <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('2x6')">SHROOM POSITION:
+                        0.60-0.65</button></td>
+                <td><button class="vlbutton nes-btn is-warning" onclick="vl_sendMidiMatrixEvent('3x6')">SHROOM POSITION:
+                        0.85-0.90</button></td>
+                <td><button class="vlbutton nes-btn is-success" onclick="vl_sendMidiMatrixEvent('4x6')">SHROOM POSITION:
+                        RANDOM</button></td>
+                <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('5x6')">SHROOM SPEED:
+                        0.02-0.03</button></td>
+                <td><button class="vlbutton nes-btn is-primary" onclick="vl_sendMidiMatrixEvent('6x6')">SHROOM SPEED:
+                        0.06-0.07</button></td>
+                <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('7x6')">START GLITCH:
+                        RANDOM</button></td>
+            </tr>
+            <tr>
+                <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('0x7')">SPAWN SHROOM:
+                        1</button></td>
+                <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('1x7')">SPAWN SHROOM:
+                        2</button></td>
+                <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('2x7')">SPAWN SHROOM:
+                        3</button></td>
+                <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('3x7')">SPAWN SHROOM:
+                        4</button></td>
+                <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('4x7')">SPAWN SHROOM:
+                        5</button></td>
+                <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('5x7')">SPAWN SHROOM:
+                        6</button></td>
+                <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('6x7')">SPAWN SHROOM:
+                        7</button></td>
+                <td><button class="vlbutton nes-btn is-error" onclick="vl_sendMidiMatrixEvent('7x7')">SPAWN SHROOM:
+                        8</button></td>
+            </tr>
+            </tbody>
+            </table>
+        </div>
+
+        <!-- React-808 -->
+        <script>!function (l) { function e(e) { for (var r, t, n = e[0], o = e[1], u = e[2], f = 0, i = []; f < n.length; f++)t = n[f], p[t] && i.push(p[t][0]), p[t] = 0; for (r in o) Object.prototype.hasOwnProperty.call(o, r) && (l[r] = o[r]); for (s && s(e); i.length;)i.shift()(); return c.push.apply(c, u || []), a() } function a() { for (var e, r = 0; r < c.length; r++) { for (var t = c[r], n = !0, o = 1; o < t.length; o++) { var u = t[o]; 0 !== p[u] && (n = !1) } n && (c.splice(r--, 1), e = f(f.s = t[0])) } return e } var t = {}, p = { 1: 0 }, c = []; function f(e) { if (t[e]) return t[e].exports; var r = t[e] = { i: e, l: !1, exports: {} }; return l[e].call(r.exports, r, r.exports, f), r.l = !0, r.exports } f.m = l, f.c = t, f.d = function (e, r, t) { f.o(e, r) || Object.defineProperty(e, r, { enumerable: !0, get: t }) }, f.r = function (e) { "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(e, "__esModule", { value: !0 }) }, f.t = function (r, e) { if (1 & e && (r = f(r)), 8 & e) return r; if (4 & e && "object" == typeof r && r && r.__esModule) return r; var t = Object.create(null); if (f.r(t), Object.defineProperty(t, "default", { enumerable: !0, value: r }), 2 & e && "string" != typeof r) for (var n in r) f.d(t, n, function (e) { return r[e] }.bind(null, n)); return t }, f.n = function (e) { var r = e && e.__esModule ? function () { return e.default } : function () { return e }; return f.d(r, "a", r), r }, f.o = function (e, r) { return Object.prototype.hasOwnProperty.call(e, r) }, f.p = "/"; var r = window.webpackJsonp = window.webpackJsonp || [], n = r.push.bind(r); r.push = e, r = r.slice(); for (var o = 0; o < r.length; o++)e(r[o]); var s = n; a() }([])</script>
+        <script src="/static/js/2.76ff1c58.chunk.js"></script>
+        <script src="/static/js/main.bf60bf66.chunk.js"></script>
+
+        <script type="text/javascript" src="resources/js/game-loader.js?v=278895"></script>
+        <canvas style="display: none" id="memecanvas"></canvas>
 </body>
 
 </html>
