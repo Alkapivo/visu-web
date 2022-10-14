@@ -1,0 +1,12 @@
+{
+    "data": [
+        {
+            "packageName": "com.devhorizon.visu",
+            "artifactName": "Visu",
+            "context": "Visu",
+            "scenes": [
+                "SceneGame"
+            ]
+        }
+    ]
+}

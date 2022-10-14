@@ -123,6 +123,7 @@ function fetchVisuTracks() {
         "piano-princess/hungry": "resources/visu/piano-princess/hungry/visu.js",
         "dvwnpour/butterflies": "resources/visu/dvwnpour/butterflies/visu.js",
         "sewerslvt/ntr_1": "resources/visu/sewerslvt/ntr_1/visu.js",
+        "sewerslvt/blissful-overdose": "resources/visu/sewerslvt/blissful-overdose/visu.js",
         "base/editor": "resources/visu/base/editor/visu.js"
     };
 }
