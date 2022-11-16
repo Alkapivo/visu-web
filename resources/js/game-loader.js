@@ -118,12 +118,13 @@ function generateTestToSaveFile() {
 
 function fetchVisuTracks() {
     return {
-        "midbooze/distant-memory": "resources/visu/midbooze/distant-memory/visu.js",
-        "selma-henerum/lets-revisit-our-time": "resources/visu/selma-henerum/lets-revisit-our-time/visu.js",
-        "piano-princess/hungry": "resources/visu/piano-princess/hungry/visu.js",
+        "aiobahn/resonance": "resources/visu/aiobahn/resonance/visu.js",
         "dvwnpour/butterflies": "resources/visu/dvwnpour/butterflies/visu.js",
-        "sewerslvt/ntr_1": "resources/visu/sewerslvt/ntr_1/visu.js",
+        "midbooze/distant-memory": "resources/visu/midbooze/distant-memory/visu.js",
+        "piano-princess/hungry": "resources/visu/piano-princess/hungry/visu.js",
+        "selma-henerum/lets-revisit-our-time": "resources/visu/selma-henerum/lets-revisit-our-time/visu.js",
         "sewerslvt/blissful-overdose": "resources/visu/sewerslvt/blissful-overdose/visu.js",
+        "sewerslvt/ntr_1": "resources/visu/sewerslvt/ntr_1/visu.js",
         "base/editor": "resources/visu/base/editor/visu.js"
     };
 }
